@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../portfolio/assets/img/scg_logo.ico" rel="icon">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Gantt Chart Page</title>
+    <style>
+        .zoom:hover {
+          animation-name: zoom;
+          animation-duration: 1.5s;
+          animation-timing-function: linear;
+          animation-delay: 0s;
+          animation-direction: alternate;
+          animation-fill-mode: none;
+      }
+        @keyframes zoom {
+        0% {transform: scale(1, 1)}
+        100% {transform: scale(1.2, 1.2)}
+      }
+    </style>
+</head>
+
+<body>
+    <h1>업무 차트</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th>3/11</th>
+            <th>3/12</th>
+            <th>3/13</th>
+            <th>3/14</th>
+            <th>3/15</th>
+            <th>3/16</th>
+            <th>3/17</th>
+        </tr>
+        <tr>
+            <td style="border-right:none;"><b>책상 정리</b></td>
+            <td colspan="2" style="background-color: rgba(12, 255,217);" class ="zoom"><a href="https://scg.skku.ac.kr/members/56">이강훈</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="border-right:none;"><b>버그 수정</b></td>
+            <td></td>
+            <td colspan="5" style="background-color: rgba(237, 192, 144);" class ="zoom"><a href="https://scg.skku.ac.kr/members/5">권민성</a></td>
+            <td style="border-right: none;"></td>
+        </tr>
+        <tr>
+            <td style="border-right:none;"><b>회의 준비</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2" style="background-color: rgba(255, 137, 123);" class ="zoom"><a href="https://scg.skku.ac.kr/members/7">박민지</a></td>
+        </tr>
+        <tr>
+            <td style="border-right:none;"><b>실습 준비</b></td>
+            <td></td>
+            <td colspan="3" style="background-color: rgba(241, 168, 227);" class ="zoom"><a href="https://scg.skku.ac.kr/members/60">한태혁</a></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: none;"></td>
+        </tr>
+        <tr>
+            <td style="border-right:none;"><b>스터디 준비</b></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="2" style="background-color: rgba(255, 255, 0); border-right:none;" class ="zoom"><a href="https://scg.skku.ac.kr/members/4">고현수</a></td>
+        </tr>
+        <tr>
+            <td style="border-right:none;">
+                <!-- <div style="width:100%;display:table;table-layout: fixed;"> -->
+                    <div style='width: 100px;vertical-align:middle;overflow:hidden;white-space:nowrap;text-overflow:ellipsis'>
+                        <b>리액트 개발 강의 구매 요청</b>
+                    </div>
+                <!-- </div> -->
+            </td>
+            <td></td>
+            <td colspan="2" style="background-color: rgba(104, 242, 152);" class ="zoom"><a href="https://scg.skku.ac.kr/members/54">김상현</a></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td style="border-right: none;"></td>
+        </tr>
+    </table>
+    <h1>새 업무 추가</h1>
+    <form>
+    <!-- method = post, 어딘가로 보내져야 할 정보들... 하지만 url를 모르기에 그냥 생략했음... -->
+        <b>과목명 </b><input type="text" name ="subject"/><br>
+        <b>담당자명 </b><input type="text" name="person"/><br>
+        <b>종류 </b><input type="radio" name="type"/> 행정
+        <input type="radio" name="type" /> 개발
+        <input type="radio" name="type" /> 기타
+        <br>
+        <select name="month" id="month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>월
+        <input type="text" name="day" maxlength="2" size="2"/> 일 ~ 
+        <select name="month" id="month">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>월
+        <input type="text" name="day" maxlength="2" size="2"/> 일
+        <br><br>
+        <button onclick="alert('등록 완료!')">등록하기</button>
+    </form>
+
+
+</body>
+
+</html>
